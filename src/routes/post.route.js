@@ -4,6 +4,8 @@ import { validId } from "../middlewares/global.middleware.js";
 
 import { Router } from "express";
 
+
+
 const postRouter = Router();
 
 postRouter.get("/", postController.findAllPostsController);
@@ -24,5 +26,7 @@ postRouter.patch(
   "/:id/:idComment/comment",
   postController.commentDeletePostController
 );
+
+
 
 export default postRouter;

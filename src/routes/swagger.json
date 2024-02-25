@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://api-breakingnews.onrender.com",
+      "url": "https://api-willnews.onrender.com",
       "description": "Render"
     },
 
@@ -19,7 +19,7 @@
       "description": "Local"
     },
     {
-      "url": "https://breakingnews.herokuapp.com",
+      "url": "https://api-willnews.onrender.com",
       "description": "Heroku"
     }
   ],
@@ -157,7 +157,7 @@
               "examples": {
                 "Users": {
                   "value": {
-                    "name": "Thiago Lima"
+                    "name": "William Mota"
                   }
                 }
               }
@@ -187,7 +187,7 @@
     },
     "/auth/login": {
       "post": {
-        "summary": "Login to Breaking News",
+        "summary": "Login to Will News",
         "description": "Route responsible for logging in a registered user",
         "tags": ["Auth"],
         "requestBody": {
@@ -199,7 +199,7 @@
               "examples": {
                 "User": {
                   "value": {
-                    "email": "docencia.thiago@gmail.com",
+                    "email": "william.mota@estudante.iftm.edu.br",
                     "password": "12345"
                   }
                 }

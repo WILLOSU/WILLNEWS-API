@@ -1,3 +1,4 @@
+
 import authService from "../services/auth.service.js";
 import bcrypt from "bcryptjs";
 import userRepositories from "../repositories/user.repositories.js";
@@ -10,6 +11,7 @@ async function createUserService({
   avatar,
   background,
 }) {
+
   if (!username || !name || !email || !password || !avatar || !background)
     throw new Error("Submit all fields for registration");
 
