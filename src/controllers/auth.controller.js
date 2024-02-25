@@ -7,8 +7,11 @@ const loginController = async (req, res) => {
     const token = await authService.loginService({ email, password });
     return res.send(token);
   } catch (e) {
+
+    res.send({token});
     return res.status(401).send(e.message);
   }
+
 };
 
 export default { loginController };

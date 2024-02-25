@@ -31,7 +31,9 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
 });
-
+// criptografia do usuário feito de forma assicrona
+// o pass é um has gigantesco, não é feito a descriptografia
+// e sim verificamos se o has é o mesmo.
 
 UserSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, 10);
