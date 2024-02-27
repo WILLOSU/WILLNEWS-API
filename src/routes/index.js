@@ -4,6 +4,8 @@ import postRouter from "./post.route.js";
 import authRouter from "./auth.route.js";
 import swaggerRouter from "./swagger.route.cjs";
 
+import mongoose from 'mongoose';
+mongoose.set('strictQuery', false);
 const router = Router();
 
 router.use("/user", userRouter);
