@@ -5,7 +5,7 @@ import authRouter from "./auth.route.js";
 import swaggerRouter from "./swagger.route.cjs";
 
 import mongoose from 'mongoose';
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 const router = Router();
 
 router.use("/user", userRouter);
