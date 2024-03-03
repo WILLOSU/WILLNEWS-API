@@ -4,7 +4,9 @@ async function createUserController(req, res) {
   const { name, username, email, password, avatar, background } = req.body;
  // desemebrando todos os campos , para validar
   try {
-    const token = await userService.createUserService({
+    
+      const token = await userService.createUserService({
+    
       name,
       username,
       email,
@@ -12,6 +14,7 @@ async function createUserController(req, res) {
       avatar,
       background,
     });
+   
     res.status(201).send(token);
   } catch (e) {
     return res.status(400).send(e.message);

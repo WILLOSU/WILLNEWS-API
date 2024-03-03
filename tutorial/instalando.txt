@@ -20,11 +20,15 @@
 
 11º npm i mongose --> // O  mongose está para o mongo assim como criar uma api do zero com node está para express.
 
+
+12º npm i bcrypt
+
+13º npm i jsonwebtoken
 -----------------------------------
 PARA VERSIONAR O projeto
 
-
-
+------
+CTRL + C = para o terminal
 
 
 

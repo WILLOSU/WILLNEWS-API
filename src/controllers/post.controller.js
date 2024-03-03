@@ -6,7 +6,7 @@ async function createPostController(req, res) {
 
   try {
     const { authorization } = req.headers;
-    //console.log(authorization)
+    console.log(authorization)
     const post = await postService.createPostService(
       { title, banner, text },
       userId

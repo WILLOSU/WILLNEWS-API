@@ -59,7 +59,14 @@ Testando os posts gets etc, vamos usar o Thunde Client, é uma extensão;
 
 imagens imgur.com imagens gratuitas e podemos postar
 
+----------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------
+MIDDLEWARE.
 
+Testar o se o usuário é identifco, ao banco de dados MongoDB.
 
+função de interceptação, ele vai interceptar minha rota, recebe req de cliente e res,
+e responde, retornando next executando a função desejada.
+utilizado para não fazer mais de uma consulta de uma vez, pois pego da requisição.
+
+----------------------------------------------------------------------------------------
