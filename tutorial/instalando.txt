@@ -18,8 +18,12 @@
 
 10º npm i --> instal todos o pacotes do projeto.
 
+11º npm i mongose --> // O  mongose está para o mongo assim como criar uma api do zero com node está para express.
+
 -----------------------------------
 PARA VERSIONAR O projeto
+
+
 
 
 

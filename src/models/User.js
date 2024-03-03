@@ -43,3 +43,8 @@ UserSchema.pre("save", async function (next) {
 const User = mongoose.model("User", UserSchema);
 
 export default User;
+
+// criei uma nova instancia do esquema ------------------------>  new mongoose.Schema
+// depois defino o esquema ------------------------------------>  mongoose.model("User", UserSchema);
+// coloco dentrou dê user para facilitar e joguei aqui dentro-->  export default User;
+// 

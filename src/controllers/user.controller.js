@@ -2,7 +2,7 @@ import userService from "../services/user.service.js";
 
 async function createUserController(req, res) {
   const { name, username, email, password, avatar, background } = req.body;
-
+ // desemebrando todos os campos , para validar
   try {
     const token = await userService.createUserService({
       name,
