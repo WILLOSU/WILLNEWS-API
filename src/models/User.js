@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({ // aqui é feito a configuração do banco!!
+  
   name: {
     type: String,
     required: true,

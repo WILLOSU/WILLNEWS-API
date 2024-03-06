@@ -28,7 +28,7 @@ async function createUserService({
     background,
   });
 
-  if (!user) throw new Error("Error creating User");
+ if (!user) throw new Error("Error creating User");
 
   const token = authService.generateToken(user.id);
 

@@ -1,13 +1,13 @@
 import "dotenv/config";
-import jwt from "jsonwebtoken";
+//import jwt from "jsonwebtoken";
 import userRepositories from "../repositories/user.repositories.js";
 
 function authMiddleware(req, res, next) {
-  const authHeader = req.headers.authorization;
+ const authHeader = req.headers.authorization;
   if (!authHeader)
     return res.status(401).send({ message: "The token was not informed!" });
 
-  const parts = authHeader.split(" "); /* ["Bearer", "asdasdasdadsadasd"] */
+  const parts = authHeader.split(" "); // ["Bearer", "asdasdasdadsadasd"]
   if (parts.length !== 2)
     return res.status(401).send({ message: "Invalid token!" });
 
@@ -30,3 +30,4 @@ function authMiddleware(req, res, next) {
 }
 
 export default authMiddleware;
+ 
