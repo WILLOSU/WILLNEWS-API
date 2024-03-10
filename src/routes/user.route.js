@@ -1,6 +1,6 @@
 import userController from "../controllers/user.controller.js";
-import authMiddleware from "../middlewares/auth.middleware.js";
-import { validId } from "../middlewares/global.middleware.js";
+import authMiddleware from "../middlewares/auth.middleware.js"; // entre a chamada e a função
+import { validId } from "../middlewares/global.middleware.js";  // valida
 
 import { Router } from "express";
 

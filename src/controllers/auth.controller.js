@@ -1,7 +1,8 @@
 import authService from "../services/auth.service.js";
 
 const loginController = async (req, res) => {
-  const { email, password } = req.body;
+  //res.send("Login ok");
+  const { email, password } = req.body;  
 
   try {
     const token = await authService.loginService({ email, password });
@@ -9,7 +10,9 @@ const loginController = async (req, res) => {
   } catch (e) {
 
     res.send({token});
-    return res.status(401).send(e.message);
+    // Retorna uma resposta com status 401 (Não autorizado) e envia a mensagem de erro como resposta
+return res.status(401).send(e.message);
+
   }
 
 };

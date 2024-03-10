@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
+
 const UserSchema = new mongoose.Schema({ // aqui é feito a configuração do banco!!
-  
   name: {
     type: String,
     required: true,
@@ -36,7 +36,7 @@ const UserSchema = new mongoose.Schema({ // aqui é feito a configuração do ba
 // o pass é um has gigantesco, não é feito a descriptografia
 // e sim verificamos se o has é o mesmo.
 
-UserSchema.pre("save", async function (next) {
+UserSchema.pre("save", async function (next) { // criptografia do  password
   this.password = await bcrypt.hash(this.password, 10);
   next();
 });
@@ -49,3 +49,6 @@ export default User;
 // depois defino o esquema ------------------------------------>  mongoose.model("User", UserSchema);
 // coloco dentrou dê user para facilitar e joguei aqui dentro-->  export default User;
 // 
+
+
+

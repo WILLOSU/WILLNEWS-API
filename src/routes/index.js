@@ -9,9 +9,9 @@ import mongoose from 'mongoose';
 mongoose.set('strictQuery', true);
 const router = Router();
 
-router.use("/user", userRouter);
-router.use("/posts", postRouter);
-router.use("/auth", authRouter);
-router.use("/doc", swaggerRouter);
+router.use("/user", userRouter);   // rota usuarios
+router.use("/posts", postRouter);  // rota post
+router.use("/auth", authRouter);   // rota autenticação
+router.use("/doc", swaggerRouter); // rota da documentação
 
 export default router;

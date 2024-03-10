@@ -1,3 +1,5 @@
+
+
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import "dotenv/config";
@@ -16,9 +18,10 @@ const loginService = async ({ email, password }) => {
 
   if (!isPasswordValid) throw new Error("Invalid password");
 
-  const token = generateToken(user.id);
+  //const token = generateToken(user.id);
 
-  return token;
+  //return token;
+  return null;
 };
 
-export default { loginService, generateToken };
+export default { loginService/*, generateToken*/ };

@@ -32,6 +32,7 @@ async function createUserService({
 
   const token = authService.generateToken(user.id);
 
+ return { message: "Usuário criado com sucesso!" };
   return token;
 }
 
@@ -89,6 +90,7 @@ async function updateUserService(
 }
 
 export default {
+  
   createUserService,
   findAllUserService,
   findUserByIdService,
