@@ -70,3 +70,8 @@ e responde, retornando next executando a função desejada.
 utilizado para não fazer mais de uma consulta de uma vez, pois pego da requisição.
 
 ----------------------------------------------------------------------------------------
+RENDER - DOCUMENTAÇÃO BACK END
+https://willnews-api.onrender.com/doc/
+http://localhost:3000/doc/
+
+----------------------------------------------------------------------------------------
