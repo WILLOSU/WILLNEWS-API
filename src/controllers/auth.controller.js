@@ -1,7 +1,7 @@
 import authService from "../services/auth.service.js";
 
 const loginController = async (req, res) => {
-  //res.send("Login ok");
+  res.send("Login ok");
   const { email, password } = req.body;  
 
   try {

@@ -24,6 +24,8 @@
 12º npm i bcrypt
 
 13º npm i jsonwebtoken
+
+14º npm i swagger-ui-express
 -----------------------------------
 PARA VERSIONAR O projeto
 

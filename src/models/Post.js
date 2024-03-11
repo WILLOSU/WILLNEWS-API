@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema({
-  user: {
+  user: { // tabela user mongoose
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true,
@@ -14,21 +14,21 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  text: {
+  text: { 
     type: String,
     required: true,
   },
-  likes: {
+  likes: {        //tabela de post
+    type: Array, // criei um array objetivo novo, não tem relacionamento,
+    required: true,
+  },
+  comments: { //tabela de post
     type: Array,
     required: true,
   },
-  comments: {
-    type: Array,
-    required: true,
-  },
-  createdAt: {
+  createdAt: { // add data
     type: Date,
-    default: Date.now(),
+    default: Date.now(), // data atual
   },
 });
 

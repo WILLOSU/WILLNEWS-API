@@ -6,7 +6,10 @@ import "dotenv/config";
 import userRepositories from "../repositories/user.repositories.js";
 
 function generateToken(id) {
-  return jwt.sign({ id: id }, process.env.SECRET_JWT, { expiresIn: 86400 });
+  return jwt.sign({ id: id }, process.env.SECRET_JWT, { expiresIn: 86400 }); // guardar a sessão do usuário
+                                                                             // sem expor o usuário
+
+ // crianado criptografia MD 5 para usar o secret_jwt https://smallseotools.com/pt/md5-generator/                                                                            
 }
 
 const loginService = async ({ email, password }) => {
@@ -18,10 +21,10 @@ const loginService = async ({ email, password }) => {
 
   if (!isPasswordValid) throw new Error("Invalid password");
 
-  //const token = generateToken(user.id);
-
-  //return token;
-  return null;
+  const token = generateToken(user.id);
+  res.send({token});
+  return token;
+ 
 };
 
-export default { loginService/*, generateToken*/ };
+export default { loginService, generateToken };
