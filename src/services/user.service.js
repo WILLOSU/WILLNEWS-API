@@ -1,6 +1,5 @@
-
 import authService from "../services/auth.service.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import userRepositories from "../repositories/user.repositories.js";
 
 async function createUserService({
@@ -11,7 +10,6 @@ async function createUserService({
   avatar,
   background,
 }) {
-
   if (!username || !name || !email || !password || !avatar || !background)
     throw new Error("Submit all fields for registration");
 
@@ -28,11 +26,10 @@ async function createUserService({
     background,
   });
 
- if (!user) throw new Error("Error creating User");
+  if (!user) throw new Error("Error creating User");
 
   const token = authService.generateToken(user.id);
 
- return { message: "Usuário criado com sucesso!" };
   return token;
 }
 
@@ -90,7 +87,6 @@ async function updateUserService(
 }
 
 export default {
-  
   createUserService,
   findAllUserService,
   findUserByIdService,

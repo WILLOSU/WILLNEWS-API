@@ -1,9 +1,5 @@
 import mongoose from "mongoose";
 
-// função do middleware é validar o ID, recebo e verifico ele
-// através do parâmetro
-// funciona assim é uma função funções de interceptações, chamada minha rota e a função de callBack
-
 export function validId(req, res, next) {
   let idParam;
   if (!req.params.id) {
@@ -18,4 +14,3 @@ export function validId(req, res, next) {
   }
   next();
 }
-

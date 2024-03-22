@@ -5,14 +5,10 @@ async function createPostController(req, res) {
   const userId = req.userId;
 
   try {
-    const { authorization } = req.headers;
-    console.log(authorization)
-   
     const post = await postService.createPostService(
       { title, banner, text },
       userId
-
-      );
+    );
     return res.status(201).send(post);
   } catch (e) {
     res.status(500).send(e.message);
