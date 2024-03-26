@@ -23,7 +23,7 @@ function authMiddleware(req, res, next) {
     if (!user || !user.id)
       return res.status(401).send({ message: "Invalid token!" });
 
-    req.userId = user.id;
+    req.userId = user.id; // aqui
 
     return next();
   });
